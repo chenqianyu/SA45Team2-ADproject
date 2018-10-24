@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+            <asp:Menu ID="Menu2" runat="server"  Orientation="Horizontal"  OnMenuItemClick="OnMenuItemClick" >
+             <Items>
+                    <asp:MenuItem Text="Stationery Req" Value="Stationery Req">
+                        <asp:MenuItem Text="View requsitions status" Value="View requsitions status"></asp:MenuItem>
+                        <asp:MenuItem Text="Generate Disbursement List" Value="Generate Disbursement List"></asp:MenuItem>
+                        <asp:MenuItem Text="inform employee" Value="New Item"></asp:MenuItem>
+                        <asp:MenuItem Text="Generate Stationery Retrieval Form" Value="Generate Stationery Retrieval Form"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Inventory maintainance" Value="Inventory maintainance">
+                        <asp:MenuItem Text="View invenory stock levels" Value="View invenory stock levels"></asp:MenuItem>
+                        <asp:MenuItem Text="Generate PO" Value="Generate PO"></asp:MenuItem>
+                        <asp:MenuItem Text="Maintain record of suppliers'information" Value="Maintain record of suppliers'information"></asp:MenuItem>
+                        <asp:MenuItem Text="Generate statics charts" Value="Generate statics charts"></asp:MenuItem>
+                        <asp:MenuItem Text="Adjust reorder level" Value="Adjust reorder level"></asp:MenuItem>
+                        <asp:MenuItem Text="Key in discrepancy level" Value="Key in discrepancy level"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Supervisor" Value="Supervisor">
+                        <asp:MenuItem Text="Approve PO" Value="Approve PO"></asp:MenuItem>
+                        <asp:MenuItem Text="Issue adjustment voucher" Value="Issue adjustment voucher"></asp:MenuItem>
+                        <asp:MenuItem Text="Delegate authority" Value="Delegate authority"></asp:MenuItem>
+                        <asp:MenuItem Text="Relinquish authority" Value="Relinquish authority"></asp:MenuItem>
+                        
+                    </asp:MenuItem>
+                       <asp:MenuItem Text="LogOut" Value="LogOut">
+                       
+                    </asp:MenuItem>
+                </Items>
+        </asp:Menu>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+      
+    </div>
+    </form>
+</body>
+</html>

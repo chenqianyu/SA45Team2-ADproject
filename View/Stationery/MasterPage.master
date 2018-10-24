@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <style>
+
+        table {
+    border-collapse: collapse;
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: darkseagreen;
+    color: white;
+}
+    </style>
+    <title></title>
+      <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+      
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <style>
+        menu 
+        {
+
+        }
+    </style>
+    <form id="form1" runat="server">
+
+     <h1 style="color:burlywood"><a href:"~/Adproject_team2/homepage.aspx">Logic University</a></h1>
+        <asp:Menu ID="Menu2" runat="server" Orientation="Horizontal" BackColor="Black" CssClass="popout" ForeColor="White" OnMenuItemClick="OnMenuItemClick" 
+            BorderColor="Black" BorderStyle="Solid" Width="2000px">
+            <DynamicHoverStyle BackColor = "red" />
+            <DynamicMenuItemStyle BackColor = "black" />
+
+
+
+             <Items>
+                    <asp:MenuItem Text="Stationery    "  Value="Stationery Req" >
+                        <asp:MenuItem Text="View Requsitions" Value="View requsitions status"></asp:MenuItem>
+                        <asp:MenuItem Text="Disbursement List" Value="Generate Disbursement List"></asp:MenuItem>
+                        <asp:MenuItem Text="Stationery Retrieval" Value="Generate Stationery Retrieval Form"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Inventory" Value="Inventory maintainance">
+                        <asp:MenuItem Text="Invenory Management" Value="View invenory stock levels"></asp:MenuItem>
+                        <asp:MenuItem Text="Generate PO" Value="Generate PO"></asp:MenuItem>
+                        <asp:MenuItem Text="Maintain Suppliers" Value="Maintain record of suppliers'information"></asp:MenuItem>
+                        <asp:MenuItem Text="Generate Statics Charts" Value="Generate statics charts"></asp:MenuItem>
+                        <asp:MenuItem Text="Adjust Reorder Level" Value="Adjust reorder level"></asp:MenuItem>
+                        <asp:MenuItem Text="Key In Discrepancy level" Value="Key in discrepancy level"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Supervisor     " Value="Supervisor">
+                        <asp:MenuItem Text="Approve PO" Value="Approve PO"></asp:MenuItem>
+                        <asp:MenuItem Text="Issue Adjustment Voucher" Value="Issue adjustment voucher"></asp:MenuItem>
+                        <asp:MenuItem Text="Delegate Authority" Value="Delegate authority"></asp:MenuItem>
+                        <asp:MenuItem Text="Relinquish Authority" Value="Relinquish authority"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="LogOut" Value="LogOut">
+                       
+                    </asp:MenuItem>
+                </Items>
+        </asp:Menu>
+       
+        <br />
+        <div style="width: 1400px; margin: 0 auto;">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+<style>
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color:#f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+                </style>
+            </asp:ContentPlaceHolder>
+        </div>
+        
+</form>
+    </body>
+</html>
